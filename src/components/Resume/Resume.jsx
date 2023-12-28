@@ -1,5 +1,5 @@
 import React from "react";
-import "./Resume.csss";
+import "./Resume.css";
 const Resume = () => {
   return <div>Resume</div>;
 };

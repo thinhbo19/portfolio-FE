@@ -8,8 +8,8 @@
 
 .home__img {
   border-radius: 50%;
-  width: 180px;
-  height: 200px;
+  width: 200px;
+  height: auto;
 }
 
 .intro {
@@ -41,7 +41,7 @@
 }
 
 .home__social-link:hover {
-  color: hsl(223, 92%, 59%);
+  color: #d4525f;
 }
 
 .scroll__down {
@@ -53,6 +53,7 @@
 
 .home__scroll-name {
   font-size: var(--small-font-size);
+  color: black;
 }
 
 .mouse {
@@ -90,4 +91,86 @@
   left: 50%;
   transform: translateX(-50%);
   animation: ani-mouse 2s linear infinite;
+}
+
+.shapes {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -10;
+}
+.shape {
+  position: absolute;
+}
+
+.s1 {
+  left: 2%;
+  top: 10%;
+}
+.s2 {
+  left: 18%;
+  top: 30%;
+}
+
+.s3 {
+  left: 5%;
+  bottom: 30%;
+}
+.s4 {
+  left: 2%;
+  bottom: 10%;
+}
+.s5 {
+  left: 44%;
+  bottom: 10%;
+}
+
+.s6 {
+  left: 36%;
+  bottom: 10%;
+}
+
+.s7 {
+  top: 20%;
+  right: 25%;
+}
+
+.s8 {
+  right: 25%;
+  bottom: 20%;
+}
+
+.s9 {
+  right: 2%;
+  top: 10%;
+}
+
+.s10 {
+  top: 45%;
+  right: 11%;
+}
+
+.s11 {
+  bottom: 10%;
+  right: 2%;
+}
+.s12 {
+  width: 50px;
+  bottom: 25%;
+  right: 2%;
+  transform: rotate(40deg);
+}
+.s13 {
+  width: 50px;
+  top: 15%;
+  right: 11%;
+  transform: rotate(-40deg);
+}
+.s14 {
+  width: 50px;
+  top: 45%;
+  left: 11%;
+  transform: rotate(25deg);
 }

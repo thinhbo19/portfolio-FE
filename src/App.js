@@ -9,21 +9,24 @@ import Portfolio from "./components/Portfolio/Portfolio";
 import Testimonials from "./components/Testimonials/Testimonials";
 import Contact from "./components/Contact/Contact";
 import Blog from "./components/Blog/Blog";
+import { BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Sidebar />
-      <main className="main">
-        <Home />
-        <About />
-        <Services />
-        <Resume />
-        <Portfolio />
-        <Testimonials />
-        <Blog />
-        <Contact />
-      </main>
+      <Router>
+        <Sidebar />
+        <main className="main">
+          <Home />
+          <About />
+          <Services />
+          <Resume />
+          <Portfolio />
+          <Testimonials />
+          <Blog />
+          <Contact />
+        </main>
+      </Router>
     </>
   );
 }

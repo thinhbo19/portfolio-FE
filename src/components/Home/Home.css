@@ -15,6 +15,7 @@
 .intro {
   max-width: 540px;
   text-align: center;
+  z-index: 1;
 }
 .home__img {
   margin-bottom: 1.5rem;

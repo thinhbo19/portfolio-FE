@@ -8,7 +8,7 @@
   padding: 1.875rem;
   border-radius: var(--border-radius);
   position: relative;
-  box-shadow: var(--shadow);
+  box-shadow: 0px 5px 20px 0px rgba(60, 67, 96, 0.1);
 }
 
 .timeline__item {
@@ -50,4 +50,22 @@
 .timeline__title {
   font-size: var(--h3-font-size);
   margin: 0.5rem 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .resume__container {
+    grid-template-columns: 450px;
+    justify-content: center;
+    row-gap: 1.875rem;
+  }
+
+  .timeline__item::before {
+    left: 2px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .resume__container {
+    grid-template-columns: 1fr;
+  }
 }

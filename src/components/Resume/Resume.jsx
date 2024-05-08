@@ -9,19 +9,39 @@ const Resume = () => {
       <h2 className="section_title">Experience</h2>
 
       <div className="resume__container grid">
-        {Data.map((val, index) => (
-          <div key={index} className="timeline grid">
-            {(val.category === "education" ||
-              val.category === "experience") && (
-              <Card
-                icon={val.icon}
-                title={val.title}
-                year={val.year}
-                desc={val.desc}
-              />
-            )}
-          </div>
-        ))}
+        <div className="timeline grid">
+          {Data.map((val, id) => {
+            if (val.category === "education") {
+              return (
+                <Card
+                  key={id}
+                  icon={val.icon}
+                  title={val.title}
+                  year={val.year}
+                  desc={val.desc}
+                />
+              );
+            }
+            return null;
+          })}
+        </div>
+
+        <div className="timeline grid">
+          {Data.map((val, ind) => {
+            if (val.category === "experience") {
+              return (
+                <Card
+                  key={ind}
+                  icon={val.icon}
+                  title={val.title}
+                  year={val.year}
+                  desc={val.desc}
+                />
+              );
+            }
+            return null;
+          })}
+        </div>
       </div>
     </section>
   );

@@ -27,11 +27,11 @@ const Sidebar = () => {
                 </a>
               </li>
 
-              <li className="nav__item">
+              {/* <li className="nav__item">
                 <a href="#Services" className="nav__link">
                   <i className="icon-briefcase"></i>
                 </a>
-              </li>
+              </li> */}
 
               <li className="nav__item">
                 <a href="#Resume" className="nav__link">
@@ -45,6 +45,12 @@ const Sidebar = () => {
                 </a>
               </li>
 
+              {/* <li className="nav__item">
+                <a href="#Testimonials" className="nav__link">
+                  <i className="icon-bubble"></i>{" "}
+                </a>
+              </li> */}
+
               <li className="nav__item">
                 <a href="#Blog" className="nav__link">
                   <i className="icon-note"></i>
@@ -53,7 +59,7 @@ const Sidebar = () => {
 
               <li className="nav__item">
                 <a href="#Contact" className="nav__link">
-                  <i className="icon-bubble"></i>
+                  <i className="icon-phone"></i>
                 </a>
               </li>
             </ul>

@@ -18,19 +18,19 @@ const Portfolio = () => {
 
       <div className="work__filters">
         <span className="work__item" onClick={() => setItems(Menu)}>
-          Everything
+          Everything (1)
         </span>
         <span className="work__item" onClick={() => filterItem("Creative")}>
-          Creative
+          Creative (1)
         </span>
         <span className="work__item" onClick={() => filterItem("Art")}>
-          Art
+          Art (1)
         </span>
         <span className="work__item" onClick={() => filterItem("Design")}>
-          Design
+          Design (1)
         </span>
         <span className="work__item" onClick={() => filterItem("Branding")}>
-          Branding
+          Branding (1)
         </span>
       </div>
 

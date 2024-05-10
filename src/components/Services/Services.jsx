@@ -8,23 +8,23 @@ const data = [
   {
     id: 1,
     image: Image1,
-    title: "UI/UX design",
+    title: "Basic UI/UX design",
     description:
-      "I am Ho Ngoc Hung Thinh, a 3rd grade male student from Ho Chi Minh City University of Education",
+      "User interface and user experience design services to create beautiful and easy-to-use web and mobile applications.",
   },
   {
     id: 2,
     image: Image2,
     title: "Web Development",
     description:
-      "I am Ho Ngoc Hung Thinh, a 3rd grade male student from Ho Chi Minh City University of Education",
+      "Services to develop and build on-demand web applications, from static websites to complex dynamic web applications.",
   },
   {
     id: 3,
     image: Image3,
-    title: "Photography",
+    title: "Tester",
     description:
-      "I am Ho Ngoc Hung Thinh, a 3rd grade male student from Ho Chi Minh City University of Education",
+      "Professional graphic design services, from logo design and brand identity to advertising and marketing materials.",
   },
 ];
 

@@ -1,11 +1,20 @@
 import React from "react";
 import "./About.css";
 import AboutImg from "../../assets/avatar-2.jpg";
-// import AboutImg from "../../assets/avatar-2.svg";
-
 import AboutBox from "./AboutBox";
+import CVimg from "../../assets/CV2024-HoNgocHungThinh-47.01.CNTT.C.png";
 
 const About = () => {
+  const downloadCV = () => {
+    const imageUrl = CVimg;
+    const link = document.createElement("a");
+    link.href = imageUrl;
+    link.download = "CV.jpg";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section className="about container section" id="About">
       <h2 className="section_title">About Me</h2>
@@ -20,9 +29,9 @@ const About = () => {
               City University of Education. I have a solid background in website
               building and customization.
             </p>
-            <a href="#a" className="btn">
+            <button onClick={downloadCV} className="btn">
               Download CV
-            </a>
+            </button>
           </div>
 
           <div className="about__skills grid">

@@ -1,25 +1,40 @@
 import "./Contact.css";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+  const Swal = require("sweetalert2");
+  const [loading, setLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
+    setLoading(true);
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_2yg39fl", "template_o2x8v36", form.current, {
-        publicKey: "BsCxooe5MI9fUpade",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
+    try {
+      await emailjs.sendForm(
+        "service_2yg39fl",
+        "template_o2x8v36",
+        form.current,
+        {
+          publicKey: "BsCxooe5MI9fUpade",
         }
       );
+      Swal.fire({
+        icon: "success",
+        title: "Bạn đã gửi thành công",
+        text: "Cảm ơn bạn đã xem trang web của tôi",
+      });
+    } catch (error) {
+      console.log("FAILED...", error.text);
+      Swal.fire({
+        icon: "error",
+        title: "Gửi không thành công",
+        text: "Hãy kiểm tra lại mạng",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -78,7 +93,7 @@ const Contact = () => {
           </div>
 
           <button type="submit" value="Send" className="btn">
-            Send Message
+            {loading ? "Sending....." : "Send Message"}
           </button>
         </form>
       </div>

@@ -1,6 +1,6 @@
 .resume__container {
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.875rem;
+  /* grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.875rem; */
 }
 
 .timeline {

@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Testimonials.css";
-import Data from "./Data";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
+import axios from "axios";
 
 const Testimonials = () => {
+  const [Data, setData] = useState([]);
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/api/comment");
+      console.log(response);
+      setData(response.data.comlist);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      throw error;
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  });
+
   return (
     <section className="testimonials container section" id="Testimonials">
       <h2 className="section_title">Clients & Reviews</h2>

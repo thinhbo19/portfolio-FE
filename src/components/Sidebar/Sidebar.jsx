@@ -45,11 +45,11 @@ const Sidebar = () => {
                 </a>
               </li>
 
-              {/* <li className="nav__item">
+              <li className="nav__item">
                 <a href="#Testimonials" className="nav__link">
                   <i className="icon-bubble"></i>{" "}
                 </a>
-              </li> */}
+              </li>
 
               <li className="nav__item">
                 <a href="#Blog" className="nav__link">

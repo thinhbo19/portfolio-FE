@@ -40,10 +40,7 @@ const ReviewForm = ({ open, handleClose, fetchData }) => {
       formData.append("name", name);
       formData.append("subtitle", occupation);
       formData.append("comment", comment);
-      const res = await axios.post(
-        "http://localhost:5000/api/comment/create",
-        formData
-      );
+      await axios.post("http://localhost:5000/api/comment/create", formData);
       alert.success("You have successfully evaluated!");
     } catch (error) {
       console.error("Error submitting data:", error);
